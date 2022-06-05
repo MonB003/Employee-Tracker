@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem fx:id="menuSave" disable="true" mnemonicParsing="false" onAction="#saveEmployee" text="Save" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem fx:id="menuReset" mnemonicParsing="false" onAction="#reset" text="Reset" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#aboutEmployeeTracker" text="About Employee Tracker" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+      <TabPane prefHeight="557.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="tabAddEmployees" text="Add Employees">
+               <content>
+                  <VBox prefHeight="347.0" prefWidth="600.0">
+                     <children>
+                        <AnchorPane prefHeight="553.0" prefWidth="800.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" layoutX="219.0" layoutY="127.0" prefHeight="171.0" prefWidth="100.0" spacing="12.0">
+                                 <children>
+                                    <Label text="First Name">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Last Name">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Age">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Job Position">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" layoutX="340.0" layoutY="122.0" prefHeight="181.0" prefWidth="120.0" spacing="7.0">
+                                 <children>
+                                    <TextField fx:id="textFirstName" onKeyTyped="#addFirstName" promptText="First Name">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="textLastName" disable="true" onKeyTyped="#addLastName" promptText="Last Name">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="textAge" disable="true" onKeyTyped="#addAge" promptText="Age">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="textJobPosition" disable="true" onKeyTyped="#addJob" promptText="Job Position">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="btnAddEmployee" disable="true" layoutX="338.0" layoutY="322.0" mnemonicParsing="false" onAction="#addEmployee" text="Add Employee">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="lblWarning" layoutX="331.0" layoutY="383.0" textFill="#f03b11">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <VBox alignment="CENTER" layoutX="478.0" layoutY="143.0" prefHeight="135.0" prefWidth="56.0" spacing="8.0">
+                                 <children>
+                                    <Button fx:id="btnAddFirstName" disable="true" mnemonicParsing="false" onAction="#enableLastName" text="Next">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnAddLastName" disable="true" mnemonicParsing="false" onAction="#enableAge" text="Next">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnAddAge" disable="true" mnemonicParsing="false" onAction="#enableJobPosition" text="Next">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnAddJob" disable="true" mnemonicParsing="false" onAction="#enableAddEmployee" text="Next">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <Label layoutX="681.0" layoutY="475.0" text="Made By: Monica Bacatan  ">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnCloseWindow" layoutX="9.0" layoutY="280.0" mnemonicParsing="false" onAction="#closeWindow" text="Close Window" visible="false">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="595.0" layoutY="14.0" text="Employee Tracker">
+                                 <font>
+                                    <Font name="Century Schoolbook Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="219.0" layoutY="107.0" text="Enter Employee Info Here:">
+                                 <font>
+                                    <Font name="Century Schoolbook Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab fx:id="tabEmployees" disable="true" text="Employees">
+               <content>
+                  <AnchorPane prefHeight="371.0" prefWidth="640.0">
+                     <children>
+                        <ListView fx:id="employeeList" layoutX="29.0" layoutY="47.0" onMouseClicked="#displayInfo" prefHeight="423.0" prefWidth="203.0" />
+                        <Label fx:id="firstNameLabel" layoutX="417.0" layoutY="106.0" prefHeight="19.0" prefWidth="70.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="lastNameLabel" layoutX="418.0" layoutY="136.0" prefHeight="19.0" prefWidth="66.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="ageLabel" layoutX="418.0" layoutY="164.0" prefHeight="19.0" prefWidth="36.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="jobPositionLabel" layoutX="418.0" layoutY="197.0" prefHeight="19.0" prefWidth="76.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="employeeNumLabel" layoutX="418.0" layoutY="225.0" prefHeight="19.0" prefWidth="111.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Button fx:id="btnRemoveEmployee" disable="true" layoutX="400.0" layoutY="374.0" mnemonicParsing="false" onAction="#removeEmployee" text="Remove" visible="false">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lblFirstName" layoutX="509.0" layoutY="106.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="lblLastName" layoutX="510.0" layoutY="136.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="lblAge" layoutX="470.0" layoutY="164.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="lblJobPosition" layoutX="514.0" layoutY="197.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label fx:id="lblEmployeeNumber" layoutX="548.0" layoutY="225.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label layoutX="83.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" text="Employee List">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEmployeeName" layoutX="487.0" layoutY="47.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnSaveEmployee" disable="true" layoutX="564.0" layoutY="374.0" mnemonicParsing="false" onAction="#saveEmployee" text="Save to File" visible="false">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lblInfoStatement" layoutX="385.0" layoutY="196.0" prefHeight="21.0" prefWidth="288.0" text="Select an employee from the Employee List">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblInfoStatement2" layoutX="449.0" layoutY="224.0" text="to see their information.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+  </children>
+</VBox>
