@@ -120,7 +120,7 @@
                                        </font></Button>
                                  </children>
                               </VBox>
-                              <Label layoutX="681.0" layoutY="475.0" text="Made By: Monica Bacatan  ">
+                              <Label layoutX="681.0" layoutY="475.0" text="Made By: Monica   ">
                                  <font>
                                     <Font size="10.0" />
                                  </font>

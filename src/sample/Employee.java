@@ -1,5 +1,5 @@
 /* Scholarship App Employee class
-By: Monica Bacatan
+By: Monica 
  */
 
 package sample;
