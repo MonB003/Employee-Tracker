@@ -37,7 +37,7 @@ You will need to install:
 Cloning the repository:
 - Open Command Prompt
 - `cd` into the folder you want the repository stored in
-- Type:  `git clone https://github.com/MonB2020/Employee-Tracker.git`
+- Type:  `git clone https://github.com/MonB003/Employee-Tracker.git`
 
 Using JavaFX in the project:
 - In IntelliJ, go to: File > Settings > Languages & Frameworks > JavaFX
