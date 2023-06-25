@@ -44,6 +44,14 @@ Using JavaFX in the project:
   - Under *Path to SceneBuilder*, copy the file location of the SceneBuilder executable on your device
   - Click *Apply*, then *Close*
 
+Configuring the SDK:
+- In IntelliJ:
+  - File > Project Structure > Project Settings > Project
+    - Use SDK: 14
+    - Language level: 8 - Lambdas, type annotations etc.
+  - File > Project Structure > Project Settings > Modules
+    - Use SDK: 1.8
+
 ### Running the project:
 1. In IntelliJ, open the Main.java file
    - Main.java file location: *Your Folder Name* /src/sample/Main.java
